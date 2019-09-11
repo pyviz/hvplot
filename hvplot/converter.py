@@ -540,8 +540,6 @@ class HoloViewsConverter(object):
             z = kwds.get('z')
             if z is None and isinstance(data, xr.Dataset):
                 z = list(data.data_vars)[0]
-            if gridded and isinstance(data, xr.Dataset) and not isinstance(z, list):
-                data = data[z]
 
             ignore = (groupby or []) + (by or [])
             coords = [c for c in data.coords if data[c].shape != ()
