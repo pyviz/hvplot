@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8"/>
+<title>User Guide — hvPlot 0.7.0 documentation</title>
+<meta content="A high-level plotting API for the PyData ecosystem built on HoloViews" name="description"/>
+<meta content="HoloViz developers" name="author"/>
+<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+    WebFont.load({
+      google: {
+        families: ['Source Sans Pro']
+      }
+    });
+  </script>
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="../_static/css/main.css" rel="stylesheet"/>
+<link href="../_static/nbsite.css" rel="stylesheet"/>
+<link href="../_static/custom.css" rel="stylesheet"/>
+<!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+</script>
+<script src="../_static/js/main.js"></script>
+<script src="../_static/nbsite.js"></script>
+<script src="../_static/require.js"></script>
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="../_static/favicon.ico" rel="icon" type="image/png"/>
+<!-- Canonical
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="/user_guide/index.html" rel="canonical">
+</link></head>
+<body class="">
+<header class="navigation">
+<div class="wrapper">
+<a class="logo" href="../index.html">
+<img alt="Logo" src="../_static/logo_horizontal.svg"/>
+</a>
+<a class="navigation-menu-button" href="javascript:void(0)" id="js-mobile-menu">Menu</a>
+<nav>
+<ul class="navigation-menu show" id="js-navigation-menu">
+<li class="nav-link doc-head"><a href="//gitter.im/pyviz/pyviz">Gitter</a></li>
+<li class="nav-link doc-head"><a href="//github.com/holoviz/hvplot">Github</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="second-nav">
+<nav>
+<ul class="navigation-menu show">
+<li class="nav-link doc-head"><a href="../getting_started/index.html">Getting Started</a></li>
+<li class="nav-link doc-head"><a href="#">User Guide</a></li>
+<li class="nav-link doc-head"><a href="../reference/index.html">Reference Gallery</a></li>
+<li class="nav-link doc-head"><a href="../topics.html">Topics</a></li>
+<li class="nav-link doc-head"><a href="../developer_guide/index.html">Developer Guide</a></li>
+<li class="nav-link doc-head"><a href="../about.html">About</a></li>
+</ul>
+</nav>
+</div>
+<!-- MAIN BODY OF DOCS –––––––––––––––––– -->
+<div class="docs section">
+<div id="hacketyhackhack"> <!-- style="width:20%;margin-right: 100px;"> --> <!--style="display: none;"> style="display:none;"> -->
+<div class="toc" style="width:15%; margin-right:20px;">
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plotting.html">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Customization.html">Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Interactive.html">Interactive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Widgets.html">Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Viewing.html">Viewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Subplots.html">Subplots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Streaming.html">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gridded_Data.html">Gridded Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkX.html">Network Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Geographic_Data.html">Geographic Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Timeseries_Data.html">Timeseries Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Statistical_Plots.html">Statistical Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pandas_API.html">Pandas API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/holoviz/hvplot">Github Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+</div>
+</div>
+<div class="content"> <!-- style="max-width:80%;margin-left:auto;margin-right: auto;">-->
+<div class="section" id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<p>The user guide provides a detailed introduction to the API and
+features of hvPlot. In the <a class="reference external" href="Introduction.html">Introduction</a> you
+will learn how to activate the plotting API and start using it. Next
+you will learn to use the API for tabular data and get an overview of
+the <a class="reference external" href="Plotting.html">types of plots</a> you can generate and how to
+<a class="reference external" href="Customization.html">customize</a> them; including how to customize
+interactivity using <a class="reference external" href="Widgets.html">widgets</a>. Next is an overview on how to
+<a class="reference external" href="Viewing.html">display and save plots</a>  in the notebook, on the
+commandline, and from a script. Another section will introduce you to
+generating <a class="reference external" href="Subplots.html">subplots</a> from your data.</p>
+<p>Once the basics are covered you can learn how to use the plotting API
+for specific types of data including <a class="reference external" href="Streaming.html">streaming data</a>, <a class="reference external" href="Gridded_Data.html">gridded data</a>
+<a class="reference external" href="NetworkX.html">network graphs</a>, <a class="reference external" href="Geographic_Data.html">geographic data</a>,
+and <a class="reference external" href="Timeseries_Data.html">timeseries data</a>. These sections are not meant
+to be read in a particular order; you should take a look at any that seem
+relevant to your data.</p>
+<p>The <a class="reference external" href="Interactive.html">interactive</a> user guide introduces you to the
+ability to use the APIs of your favorite data analysis libraries
+interactively by allowing you to pass in widgets in place of constant
+arguments. This will provide you with an invaluable tool to perform
+exploratory analyses quickly but also build powerful and complex data
+analysis pipelines using APIs you are already familiar with.</p>
+<p>Lastly the <a class="reference external" href="Statistical_Plots.html">statistical plots</a> section will
+take you through a number of specialized plot types modelled on the
+pandas.plotting module and the <a class="reference external" href="Pandas_API.html">pandas API</a> section mimics
+the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html">pandas visualization docs</a>
+but using pandas.options.plotting.backend to do the plotting in HoloViews
+rather than Matplotlib.</p>
+<p><strong>Overview</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="Introduction.html">Introduction</a>
+Introduction to hvPlot and how to start using it.</p></li>
+<li><p><a class="reference external" href="Plotting.html">Plotting</a>
+Overview of plotting your data with hvPlot.</p></li>
+<li><p><a class="reference external" href="Customization.html">Customization</a>
+Listing of available options to customize plots.</p></li>
+<li><p><a class="reference external" href="Interactive.html">Interactive</a>
+Interactive APIs for data exploration.</p></li>
+<li><p><a class="reference external" href="Widgets.html">Widgets</a>
+Adding and customizing interactivity using Panel widgets.</p></li>
+<li><p><a class="reference external" href="Viewing.html">Viewing</a>
+Displaying and saving plots in the notebook, at the command prompt, or in scripts.</p></li>
+<li><p><a class="reference external" href="Subplots.html">Subplots</a>
+How to generate subplots and grids.</p></li>
+<li><p><a class="reference external" href="Streaming.html">Streaming</a>
+How to use hvPlot for streaming plots with the streamz library.</p></li>
+<li><p><a class="reference external" href="Gridded_Data.html">Gridded Data</a>
+How to use hvPlot for plotting XArray-based gridded data.</p></li>
+<li><p><a class="reference external" href="NetworkX.html">Network Graphs</a>
+How to use hvPlot for plotting NetworkX graphs.</p></li>
+<li><p><a class="reference external" href="Geographic_Data.html">Geographic Data</a>
+Using GeoViews, Cartopy, GeoPandas and spatialpandas to plot data in geographic coordinate systems.</p></li>
+<li><p><a class="reference external" href="Timeseries_Data.html">Timeseries Data</a>
+Using hvPlot when working with timeseries data.</p></li>
+<li><p><a class="reference external" href="Statistical_Plots.html">Statistical Plots</a>
+A number of statistical plot types modeled on the pandas.plotting module.</p></li>
+<li><p><a class="reference external" href="Pandas_API.html">Pandas API</a>
+How to use pandas.plot directly by switching out the plotting backend.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+<!-- END MAIN BODY OF DOCS ––––––––––––– -->
+<footer class="footer">
+<div class="footer-links">
+<ul>
+<li><span class="footer-title">Links</span></li>
+<li><a href="../getting_started/index.html">Getting Started</a></li>
+<li><a href="#">User Guide</a></li>
+<li><a href="../reference/index.html">Reference Gallery</a></li>
+<li><a href="../topics.html">Topics</a></li>
+<li><a href="../developer_guide/index.html">Developer Guide</a></li>
+<li><a href="../about.html">About</a></li>
+</ul>
+<ul>
+<li><span class="footer-title">Join Us</span></li>
+<li><a href="//gitter.im/pyviz/pyviz">Gitter</a></li>
+<li><a href="//github.com/holoviz/hvplot">Github</a></li>
+</ul>
+<ul class="copyright">
+<li>2018-2020 HoloViz developers</li>
+</ul>
+</div>
+</footer>
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154795830-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154795830-5');
+</script>
+<!-- MathJax Config -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
